@@ -1,8 +1,34 @@
 {
-  "name": "bn-idle",
+  "name": "bn-ng-idle",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "keywords": [
+    "Angular 6 tree component",
+    "Ng tree",
+    "Ng2 tree",
+    "angular tree",
+    "bn ng tree",
+    "tree component",
+    "ng tree component",
+    "angular tree component"
+  ],
+  "description": "Angular 6+ user idle detector, session timeout detector",
+  "license": "MIT",
+  "author": "bearnithi",
+  "person": {
+    "name": "nithi",
+    "email": "bearnithi@gmail.com",
+    "url": "http://bearnithi.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bearnithi/bn-ng-idle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bearnithi/bn-ng-idle/issues",
+    "email": "bearnithi@gmail.com"
   }
 }

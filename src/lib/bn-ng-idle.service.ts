@@ -5,7 +5,7 @@ import { Observable, fromEvent, merge, Subject, timer } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class BnIdleService {
+export class BnNgIdleService {
 
   private idle$: Observable<any>;
   private timer$;
