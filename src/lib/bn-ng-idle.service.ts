@@ -20,7 +20,7 @@ export class BnNgIdleService {
 
   public startWatching(timeOutSeconds): Observable<any> {
     this.idle$ = merge(
-      fromEvent(document, 'mosuemove'),
+      fromEvent(document, 'mousemove'),
       fromEvent(document, 'click'),
       fromEvent(document, 'mousedown'),
       fromEvent(document, 'keypress'),
