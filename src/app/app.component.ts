@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
 
   // initiate it in your component OnInit
   ngOnInit(): void {
-    this.bnIdle.startWatching(10).subscribe((res) => {
+    this.bnIdle.startWatching(60).subscribe((res) => {
       if (res) {
         console.log('session expired');
       }

@@ -1,12 +1,17 @@
 {
   "name": "bn-ng-idle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "peerDependencies": {
     "@angular/common": ">=6.0.0",
     "@angular/core": ">=6.0.0"
   },
   "keywords": [
-    "Angular 8 idle component",
+    "Angular 8 user idle detect",
+    "Angular 7 user idle detect",
+    "Angular 6 user idle detect",
+    "Ng session timeout",
+    "Angular session timeout",
+    "session timeout",
     "Ng idle",
     "Ng2 idle",
     "angular user idle",
