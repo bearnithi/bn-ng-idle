@@ -1,0 +1,34 @@
+{
+  "name": "bn-ng-idle",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": ">=6.0.0",
+    "@angular/core": ">=6.0.0"
+  },
+  "keywords": [
+    "Angular 8 idle component",
+    "Ng idle",
+    "Ng2 idle",
+    "angular user idle",
+    "bn ng idle",
+    "user idle component",
+    "ng idle component",
+    "angular idle component"
+  ],
+  "description": "Angular 6, 7, 8+ user idle detector, session timeout detector",
+  "license": "MIT",
+  "author": "bearnithi",
+  "person": {
+    "name": "nithi",
+    "email": "bearnithi@gmail.com",
+    "url": "http://bearnithi.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bearnithi/bn-ng-idle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bearnithi/bn-ng-idle/issues",
+    "email": "bearnithi@gmail.com"
+  }
+}
