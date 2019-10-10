@@ -66,7 +66,7 @@ export class AppComponent {
   // initiate it in your component OnInit
   ngOnInit(): void {
     this.bnIdle.startWatching(60).subscribe((isTimedOut: boolean) => {
-      if (res) {
+      if (isTimedOut) {
         console.log('session expired');
       }
     });
