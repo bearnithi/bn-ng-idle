@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "d0203a4a-e9c5-4b1a-9549-72cb9a6f7f3b"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -102,6 +105,37 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        }
+      }
+    },
+    "bn-ng-idle": {
+      "projectType": "library",
+      "root": "projects/bn-ng-idle",
+      "sourceRoot": "projects/bn-ng-idle/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/bn-ng-idle/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/bn-ng-idle/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/bn-ng-idle/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/bn-ng-idle/src/test.ts",
+            "tsConfig": "projects/bn-ng-idle/tsconfig.spec.json",
+            "karmaConfig": "projects/bn-ng-idle/karma.conf.js"
           }
         }
       }
