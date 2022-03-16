@@ -80,5 +80,6 @@ By checking whether the `isTimedOut` is true or not, you can show your session t
 
 ## VERSION
 
-1.0.0 - Angular 6+ user idle detector
 2.0.0 - Supports all the angular versions till latest one.
+
+1.0.0 - Angular 6+ user idle detector.
