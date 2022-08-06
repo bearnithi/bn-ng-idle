@@ -2,7 +2,7 @@
 Angular (Latest Version) **User Idle / Session Timout** detector service. It's a straight forward **user idle / session timout** detector for Angular. You can use this for session timeout, user idle restriction after a period of time etc..
 
 - [ProDevHub.com - Professional Developers Community](http://prodevhub.com/)
-- [Documentatioin](https://prodevhub.com/2020/03/22/how-to-handle-user-idleness-and-session-timeout-in-angular/)
+- [Documentation](https://prodevhub.com/2020/03/22/how-to-handle-user-idleness-and-session-timeout-in-angular/)
 - [Angular PDF Viewer](https://www.npmjs.com/package/bn-ng-pdf-viewer)
 
 ## INSTALLATION
