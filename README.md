@@ -1,27 +1,86 @@
-# BnNg
+## DESCRIPTION
+Angular (Latest Version) **User Idle / Session Timout** detector service. It's a straight forward **user idle / session timout** detector for Angular. You can use this for session timeout, user idle restriction after a period of time etc..
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+- [ProDevHub.com - Professional Developers Community](http://prodevhub.com/)
+- [Documentatioin](https://prodevhub.com/2020/03/22/how-to-handle-user-idleness-and-session-timeout-in-angular/)
+- [Angular PDF Viewer](https://www.npmjs.com/package/bn-ng-pdf-viewer)
 
-## Development server
+## INSTALLATION
+```sh
+npm install bn-ng-idle
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## How to use angular idle detector in your angular app
 
-## Code scaffolding
+### API List
+1. **startWatching(timeOutSeconds)** - This method is used to initiate the idle detector in angular. `timeoutSeconds` is a parameter, number of seconds to emit the idle event. This method returns an observable which you can subscribe to detect the idleness of the user.
+2. **resetTimer()** - This method is used to reset the timer
+3. **stopTimer()** - This method is used to stop the idle detector.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Sample Code for Angular User Idle
 
-## Running unit tests
+### app.module.ts - Import the BnNgIdleService in your module
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-## Running end-to-end tests
+import { AppComponent } from './app.component';
+import { BnNgIdleService } from 'bn-ng-idle'; // import bn-ng-idle service
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [BnNgIdleService], // add it to the providers of your module
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+
+
+### app.component.ts - Import the BnNgIdleService in your component
+
+```typescript
+import { Component } from '@angular/core';
+import { BnNgIdleService } from 'bn-ng-idle'; // import it to your component
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+
+  constructor(private bnIdle: BnNgIdleService) {
+
+  }
+
+  // initiate it in your component OnInit
+  ngOnInit(): void {
+    this.bnIdle.startWatching(60).subscribe((isTimedOut: boolean) => {
+      if (res) {
+        console.log('session expired');
+      }
+    });
+  }
+}
+
+```
+
+In the above example, I have invoked the `startWatching(timeOutSeconds)` method with 60 seconds (1 minute) and subscribed to the observable, once the user is idle for one minute then the subscribe method will get invoked with the `isTimedOut` parameter's value (which is a boolean) as `true`.
+
+By checking whether the `isTimedOut` is true or not, you can show your session timeout dialog or message. For brevity, I just logged the message to the console.
+
+## VERSION
+
+2.0.0 - Supports all the angular versions till latest one.
+
+1.0.0 - Angular 6+ user idle detector.
