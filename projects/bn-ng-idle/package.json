@@ -1,6 +1,6 @@
 {
   "name": "bn-ng-idle",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "peerDependencies": {
     "@angular/common": ">=10.0.0",
     "@angular/core": ">=10.0.0"
@@ -10,7 +10,7 @@
   },
   "keywords": [
     "Angular user idle detect",
-    "Angular 13 user idle detect",
+    "Angular 16 user idle detect",
     "Angular 12 user idle detect",
     "Ng session timeout",
     "Angular session timeout",

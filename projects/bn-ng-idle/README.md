@@ -14,7 +14,7 @@ npm install bn-ng-idle
 
 ### API List
 1. **startWatching(timeOutSeconds)** - This method is used to initiate the idle detector in angular. `timeoutSeconds` is a parameter, number of seconds to emit the idle event. This method returns an observable which you can subscribe to detect the idleness of the user.
-2. **resetTimer()** - This method is used to reset the timer
+2. **resetTimer(timeOutSeconds?)** - This method is used to reset the timer. You can also change the timer using optional parameter.
 3. **stopTimer()** - This method is used to stop the idle detector.
 
 
